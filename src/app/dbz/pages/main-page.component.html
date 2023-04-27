@@ -1,0 +1,24 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+
+  <div class="col">
+
+    <!-- Le paso la info al hijo mediante la variable characterList -->
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    >
+    </dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <!-- Recibo la info del hijo -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+  </div>
+
+</div>
